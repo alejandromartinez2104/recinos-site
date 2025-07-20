@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - BelizeImports</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-box"></i>
+                </div>
+                <span class="logo-text">BelizeImports</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link active">Products</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="work-with-us.html" class="nav-link">Work With Us</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-right">
+                <div class="nav-contact">
+                    <i class="fas fa-phone"></i>
+                    <span>+501-123-4567</span>
+                </div>
+                <button class="btn btn-primary">Get Quote</button>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Discover our extensive range of imported goods, from consumables to industrial equipment</p>
+        </div>
+    </section>
+
+    <!-- Products Content -->
+    <section class="products-content">
+        <div class="container">
+            <div class="products-layout">
+                <!-- Filters Sidebar -->
+                <div class="filters-sidebar">
+                    <div class="filter-card">
+                        <h3><i class="fas fa-filter"></i> Filters</h3>
+                        
+                        <!-- Search -->
+                        <div class="filter-group">
+                            <label>Search Products</label>
+                            <div class="search-input">
+                                <i class="fas fa-search"></i>
+                                <input type="text" id="product-search" placeholder="Search products...">
+                            </div>
+                        </div>
+
+                        <!-- Category Filter -->
+                        <div class="filter-group">
+                            <label>Category</label>
+                            <select id="category-filter">
+                                <option value="all">All Categories</option>
+                                <option value="consumables">Consumable Goods</option>
+                                <option value="industrial">Industrial Equipment</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="construction">Construction Materials</option>
+                            </select>
+                        </div>
+
+                        <!-- Price Range -->
+                        <div class="filter-group">
+                            <label>Price Range</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="radio" name="price" value="all" checked>
+                                    <span class="checkmark"></span>
+                                    All Prices
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="radio" name="price" value="under-50">
+                                    <span class="checkmark"></span>
+                                    Under $50
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="radio" name="price" value="50-500">
+                                    <span class="checkmark"></span>
+                                    $50 - $500
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="radio" name="price" value="over-500">
+                                    <span class="checkmark"></span>
+                                    Over $500
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-main">
+                    <!-- Sort Controls -->
+                    <div class="products-controls">
+                        <div class="products-count">
+                            <h2 id="products-found">6 Products Found</h2>
+                            <p id="category-info"></p>
+                        </div>
+                        <div class="sort-dropdown">
+                            <select id="sort-select">
+                                <option value="featured">Sort by: Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="rating">Highest Rated</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid" id="products-grid">
+                        <div class="product-card" data-category="consumables" data-price="24.99" data-featured="true">
+                            <div class="product-image">
+                                <img src="world.svg" alt="Premium Coffee Beans">
+                                <div class="product-badges">
+                                    <span class="badge featured">FEATURED</span>
+                                    <span class="badge sale">SALE</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3>Premium Coffee Beans</h3>
+                                <p>High-quality imported coffee beans from Central America</p>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span>4.8 (124 reviews)</span>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="price-group">
+                                        <span class="product-price">$24.99</span>
+                                        <span class="original-price">$29.99</span>
+                                    </div>
+                                    <button class="btn btn-yellow btn-sm">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="industrial" data-price="2499.99" data-featured="true">
+                            <div class="product-image">
+                                <img src="world.svg" alt="Industrial Drill Press">
+                                <div class="product-badges">
+                                    <span class="badge featured">FEATURED</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3>Industrial Drill Press</h3>
+                                <p>Professional-grade drill press for industrial applications</p>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span>4.9 (45 reviews)</span>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="price-group">
+                                        <span class="product-price">$2,499.99</span>
+                                    </div>
+                                    <button class="btn btn-yellow btn-sm">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="consumables" data-price="12.99" data-featured="false">
+                            <div class="product-image">
+                                <img src="world.svg" alt="Organic Spice Collection">
+                                <div class="product-badges">
+                                    <span class="badge sale">SALE</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3>Organic Spice Collection</h3>
+                                <p>Fresh organic spices imported from around the world</p>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span>4.7 (89 reviews)</span>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="price-group">
+                                        <span class="product-price">$12.99</span>
+                                        <span class="original-price">$15.99</span>
+                                    </div>
+                                    <button class="btn btn-yellow btn-sm">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="electronics" data-price="899.99" data-featured="false">
+                            <div class="product-image">
+                                <img src="world.svg" alt="Smart Electronics Kit">
+                            </div>
+                            <div class="product-info">
+                                <h3>Smart Electronics Kit</h3>
+                                <p>Latest technology and electronic components</p>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span>4.6 (67 reviews)</span>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="price-group">
+                                        <span class="product-price">$899.99</span>
+                                    </div>
+                                    <button class="btn btn-yellow btn-sm">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card out-of-stock" data-category="construction" data-price="349.99" data-featured="false">
+                            <div class="product-image">
+                                <img src="world.svg" alt="Construction Tools Set">
+                                <div class="out-of-stock-overlay">
+                                    <span>Out of Stock</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3>Construction Tools Set</h3>
+                                <p>Complete set of professional construction tools</p>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span>4.8 (156 reviews)</span>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="price-group">
+                                        <span class="product-price">$349.99</span>
+                                    </div>
+                                    <button class="btn btn-outline btn-sm" disabled>Notify Me</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="consumables" data-price="89.99" data-featured="true">
+                            <div class="product-image">
+                                <img src="world.svg" alt="Gourmet Food Selection">
+                                <div class="product-badges">
+                                    <span class="badge featured">FEATURED</span>
+                                    <span class="badge sale">SALE</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3>Gourmet Food Selection</h3>
+                                <p>Premium imported gourmet foods and delicacies</p>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span>4.9 (203 reviews)</span>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="price-group">
+                                        <span class="product-price">$89.99</span>
+                                        <span class="original-price">$99.99</span>
+                                    </div>
+                                    <button class="btn btn-yellow btn-sm">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- No Results -->
+                    <div class="no-results" id="no-results" style="display: none;">
+                        <div class="no-results-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>No products found</h3>
+                        <p>Try adjusting your search or filter criteria</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <span class="logo-text">BelizeImports</span>
+                    </div>
+                    <p>Your trusted partner for premium imports in Belize. Quality products, reliable service, competitive prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="work-with-us.html">Work With Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Product Categories</h3>
+                    <ul>
+                        <li><a href="products.html?category=consumables">Consumable Goods</a></li>
+                        <li><a href="products.html?category=industrial">Industrial Equipment</a></li>
+                        <li><a href="products.html?category=electronics">Electronics</a></li>
+                        <li><a href="products.html?category=food">Food & Beverages</a></li>
+                        <li><a href="products.html?category=construction">Construction Materials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p>123 Commerce Street</p>
+                                <p>Belize City, Belize</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+501-123-4567</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@belizeimports.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BelizeImports. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>
